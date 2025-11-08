@@ -46,5 +46,39 @@ WeatherApp provides accurate weather forecasts for major South African cities wi
 - **Background Tasks**: WorkManager
 - **Testing**: JUnit, Espresso
 
-## 📁 Project Structure
+
+## UI/UX Design Considerations
+
+### Design Principles
+- **Material Design 3** - Modern Android design guidelines
+- **Accessibility** - Support for screen readers and large text
+- **Responsive Layout** - Adapts to different screen sizes
+- **Intuitive Navigation** - Bottom navigation with clear hierarchy
+
+### Key Screens
+1. **Home** - Current weather with search functionality
+2. **Forecast** - 7-day weather predictions
+3. **Map** - Interactive weather map
+4. **Notifications** - Alert settings
+5. **Settings** - User preferences and language selection
+
+## GitHub & CI/CD Implementation
+
+### Version Control Strategy
+- **Main Branch** - Production-ready code
+- **Feature Branches** - New feature development
+- **Pull Requests** - Code review and quality gates
+
+### GitHub Actions Workflow
+```yaml
+name: Android CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - checkout
+      - java-setup@v3
+      - android-sdk-setup
+      - build-and-test
 
